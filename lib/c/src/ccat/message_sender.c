@@ -236,7 +236,8 @@ static PTHREAD catMessageSenderFun(PVOID para) {
         }
 
         size_t checkpoint = 0;
-        for (int i = 0; i < eleNum; i++) {
+        int i;
+        for (i = 0; i < eleNum; i++) {
             catEncodeMessageTree(messageArray[i], g_cat_mergeBuf);
             deleteCatMessageTree(messageArray[i]);
 
